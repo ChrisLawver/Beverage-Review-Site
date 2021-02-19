@@ -10,11 +10,15 @@ namespace ReviewsSite.Controllers
 {
     public class BevController: Controller
     {
+        
         public ViewResult Index()
         {
-            Bev bev = new Bev();
 
+            Bev bev = new Bev(1, "Sweet and smooth", "Coke", "Soda", "It's good");
+            Bev bev2 = new Bev(2, "Crisp and clean", "Pepsi", "Soda", "Not as good as coke");
             return View(bev);
         }
+
+
     }
 }

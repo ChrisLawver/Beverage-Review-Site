@@ -1,4 +1,4 @@
-﻿
+﻿@model ReviewsSite.Models.Bev
 @{
     Layout = null;
 }
@@ -8,9 +8,29 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <link rel="stylesheet" href="~/Style.css" />
+    <title>BEVerly</title>
 </head>
 <body>
-    <h1>Beverage Review Site</h1>
+    <header>
+        <h1>BEVerly</h1>
+
+    </header>
+
+    <main>
+
+        <p>ID number: @Model.Id</p>
+        <p>Description: @Model.Description</p>
+        <p>Name: @Model.Name</p>
+        <p>Category: @Model.Category</p>
+        <p>Review: @Model.Review</p>
+
+       
+
+    </main>
+
+    <footer>
+        &copy; BEVerly 2021
+    </footer>
 </body>
 </html>
