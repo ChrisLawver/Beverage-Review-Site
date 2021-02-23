@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ReviewsSite.Repositories
 {
-    public class BevContext : dbContext; 
+    public class BevContext : DbContext; 
     public class BevRepository : IRepository<Bev>
 
     { 
