@@ -39,7 +39,7 @@ namespace ReviewsSite
                     Description = "Rough and tumble",
                     Category = "Soda",
                     Review = "Disappointing.",
-                    Image = "Pepsipic.jpg"
+                    Image = "Images/Pepsipic.jpg"
                 }
              );
 
