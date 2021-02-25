@@ -29,7 +29,8 @@ namespace ReviewsSite
                     Name = "Coke",
                     Description = "Smooth caramel beverage.",
                     Category = "Soda",
-                    Review = " 10/10 Would reccomend."
+                    Review = " 10/10 Would reccomend.", 
+                    Image = ""
                 },
                 new Bev()
                 {
@@ -37,7 +38,8 @@ namespace ReviewsSite
                     Name = "Pepsi",
                     Description = "Rough and tumble",
                     Category = "Soda",
-                    Review = "Disappointing."
+                    Review = "Disappointing.",
+                    Image = "Pepsipic.jpg"
                 }
              );
 
