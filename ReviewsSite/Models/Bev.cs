@@ -15,6 +15,7 @@ namespace ReviewsSite.Models
         public string Image { get; set; }
         public string Category { get; set; }
         public string Review { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
 
         //public List<Bev> BevList { get; set; }
 
