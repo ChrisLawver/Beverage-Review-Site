@@ -21,11 +21,8 @@
 
         @foreach (var bev in Model)
         {
-            <p>ID number: @bev.Id</p>
-            <p>Description: @bev.Description</p>
-            <p>Name: @bev.Name</p>
-            <p>Category: @bev.Category</p>
-            <p>Review: @bev.Review</p>
+            <p>Name: <a href="/Bev/Details/@bev.Id">@bev.Name</a></p>
+ 
         }
 
 
