@@ -3,13 +3,22 @@ using System.Web.Mvc;
 using Xunit;
 using ReviewsSite.Controllers;
 using ReviewsSite.Models;
+using ReviewsSite.Repositories;
 
 namespace ReviewsSite.Tests
 {
     public class BevControllerTests
     {
+        private BevRepository bevRepo;
 
-        BevController sut = new BevController();
+        private BevController sut;
+
+        public BevControllerTests()
+        {
+            sut = new BevController(bevRepo);
+        }
+
+        
 
         [Fact]
         public void Index_Should_Return_View()

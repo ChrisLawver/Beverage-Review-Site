@@ -1,4 +1,4 @@
-﻿@model ReviewsSite.Models.Bev
+﻿@model IEnumerable<ReviewsSite.Models.Bev>
 @{
     Layout = null;
 }
@@ -19,13 +19,17 @@
 
     <main>
 
-        <p>ID number: @Model.Id</p>
-        <p>Description: @Model.Description</p>
-        <p>Name: @Model.Name</p>
-        <p>Category: @Model.Category</p>
-        <p>Review: @Model.Review</p>
+        @foreach (var bev in Model)
+        {
+            <p>ID number: @bev.Id</p>
+            <p>Description: @bev.Description</p>
+            <p>Name: @bev.Name</p>
+            <p>Category: @bev.Category</p>
+            <p>Review: @bev.Review</p>
+        }
 
-       
+
+
 
     </main>
 

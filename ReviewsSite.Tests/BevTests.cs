@@ -13,7 +13,7 @@ namespace ReviewsSite.Tests
         
         public BevTests()
         {
-            sut = new Bev(32, "This is the bev description");
+            sut = new Bev(32, "This is the bev description", "Coke", "Soda", "would buy again");
 
         }
 

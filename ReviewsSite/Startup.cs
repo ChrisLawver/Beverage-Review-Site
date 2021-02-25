@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using ReviewsSite.Models;
+using ReviewsSite.Repositories;
 
 namespace ReviewsSite
 {
@@ -26,6 +28,9 @@ namespace ReviewsSite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<BevContext>();
+            services.AddScoped<IRepository<Bev>, BevRepository>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
