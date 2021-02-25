@@ -10,6 +10,8 @@ namespace ReviewsSite
     public class BevContext : DbContext
     {
         public DbSet<Bev> Bevs { get; set; }
+        public DbSet<Review> ReviewList { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -29,7 +31,8 @@ namespace ReviewsSite
                     Name = "Coke",
                     Description = "Smooth caramel beverage.",
                     Category = "Soda",
-                    Review = " 10/10 Would reccomend."
+                    Review = " 10/10 Would reccomend.", 
+                    Image = ""
                 },
                 new Bev()
                 {
@@ -37,9 +40,37 @@ namespace ReviewsSite
                     Name = "Pepsi",
                     Description = "Rough and tumble",
                     Category = "Soda",
-                    Review = "Disappointing."
+                    Review = "Disappointing.",
+                    Image = "Images/Pepsipic.jpg"
                 }
+
+
              );
+            modelBuilder.Entity<Review>().HasData(
+                new Review()
+                {
+                    Id = 1,
+                    Content = "Too carbonated.",
+                    ReviewerName = "Carlos",
+                    Rating = "5",
+                    ReviewDate = DateTime.Now
+
+
+                },
+                new Review()
+                {
+                    Id = 2,
+                    Content = "Offensive to the pallete",
+                    ReviewerName = "Davis",
+                    Rating = "0",
+                    ReviewDate = DateTime.Now
+
+
+                }
+
+
+             );
+
 
         }
 

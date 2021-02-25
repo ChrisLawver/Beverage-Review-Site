@@ -27,6 +27,12 @@ namespace ReviewsSite.Controllers
             return View(bevs);
         }
 
+        public ViewResult Details(int id)
+        {
+            var bev = bevRepo.GetById(id);
+            return View(bev);
+        }
+
 
     }
 }
