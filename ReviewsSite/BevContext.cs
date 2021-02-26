@@ -32,7 +32,7 @@ namespace ReviewsSite
                     Description = "Smooth caramel beverage.",
                     Category = "Soda",
                     Review = " 10/10 Would reccomend.", 
-                    Image = ""
+                    Image = "Images/coke.jpg"
                 },
                 new Bev()
                 {
@@ -43,9 +43,9 @@ namespace ReviewsSite
                     Review = "Disappointing.",
                     Image = "Images/Pepsipic.jpg"
                 }
-
-
+             
              );
+
             modelBuilder.Entity<Review>().HasData(
                 new Review()
                 {
@@ -54,8 +54,6 @@ namespace ReviewsSite
                     ReviewerName = "Carlos",
                     Rating = "5",
                     ReviewDate = DateTime.Now
-
-
                 },
                 new Review()
                 {
@@ -64,11 +62,7 @@ namespace ReviewsSite
                     ReviewerName = "Davis",
                     Rating = "0",
                     ReviewDate = DateTime.Now
-
-
                 }
-
-
              );
 
 

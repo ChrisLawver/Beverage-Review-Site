@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ReviewsSite.Repositories
 {
-    public class Repository : IRepository<T> where T: class 
-    {
-    }
+    //public class Repository : IRepository<T> where T: class 
+    //{
+    //}
 }
