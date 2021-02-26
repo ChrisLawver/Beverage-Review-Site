@@ -8,15 +8,23 @@
         <link rel="stylesheet" href="~/Style.css" />
         <title>BEVerly</title>
     </head>
+    <header>
+        <h1>BEVerly</h1>
+        <p><a href="/Bev">Back to Home Page</a></p>
+    </header>
     <body>
-        <h1>@Model.Name </h1>
-        <p>@Model.Description</p>
-        <p>@Model.Category</p>
-        <p>@Model.Review</p>
-        <img src ="~/@Model.Image"/> 
-
-
-
+        <main>
+            <h1>@Model.Name </h1>
+            <p>Description: @Model.Description</p>
+            <p>Category: @Model.Category</p>
+            <p>Review: @Model.Review</p>
+            <div class="container">
+                <img src="~/@Model.Image" />
+            </div>
+        </main>
+        <footer>
+            &copy; BEVerly 2021
+        </footer>
 
     </body>
 

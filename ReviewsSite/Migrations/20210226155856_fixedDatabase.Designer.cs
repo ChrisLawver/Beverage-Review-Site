@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewsSite;
 
 namespace ReviewsSite.Migrations
 {
     [DbContext(typeof(BevContext))]
-    partial class BevContextModelSnapshot : ModelSnapshot
+    [Migration("20210226155856_fixedDatabase")]
+    partial class fixedDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,7 +55,7 @@ namespace ReviewsSite.Migrations
                             Description = "Smooth caramel beverage.",
                             Image = "Images/coke.jpg",
                             Name = "Coke",
-                            Review = " 10/10 Would recommend."
+                            Review = " 10/10 Would reccomend."
                         },
                         new
                         {
@@ -137,7 +139,7 @@ namespace ReviewsSite.Migrations
                             BevId = 1,
                             Content = "Too carbonated.",
                             Rating = "5",
-                            ReviewDate = new DateTime(2021, 2, 26, 13, 43, 43, 72, DateTimeKind.Local).AddTicks(6375),
+                            ReviewDate = new DateTime(2021, 2, 26, 10, 58, 54, 899, DateTimeKind.Local).AddTicks(5047),
                             ReviewerName = "Carlos"
                         },
                         new
@@ -146,7 +148,7 @@ namespace ReviewsSite.Migrations
                             BevId = 2,
                             Content = "Offensive to the pallete",
                             Rating = "0",
-                            ReviewDate = new DateTime(2021, 2, 26, 13, 43, 43, 76, DateTimeKind.Local).AddTicks(3100),
+                            ReviewDate = new DateTime(2021, 2, 26, 10, 58, 54, 903, DateTimeKind.Local).AddTicks(9446),
                             ReviewerName = "Davis"
                         });
                 });

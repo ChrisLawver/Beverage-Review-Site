@@ -14,18 +14,16 @@
 <body>
     <header>
         <h1>BEVerly</h1>
+        <p>Welcome to the Carbonated Beverage Review!</p>
 
     </header>
 
     <main>
-
+        <h2>Select a beverage to review</h2>
         @foreach (var bev in Model)
         {
-            <p>Name: <a href="/Bev/Details/@bev.Id">@bev.Name</a></p>
+            <p><a href="/Bev/Details/@bev.Id">@bev.Name</a></p>
             
-
-
-
         }
 
 
