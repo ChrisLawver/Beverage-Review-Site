@@ -1,9 +1,15 @@
 ﻿body {
     background-color: whitesmoke;
     font-size: 1.1em;
-    background-image: url(Images\bubbles.jpg);
+    background-image: url("Images/bubblesdrinks.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    
 }
-
+main {
+    margin-left: 5%; 
+}
 header {
     border-bottom: solid black 2px;
     text-align: center;
@@ -15,7 +21,7 @@ img {
 }
 
 footer {
-    margin-top: 10%;
+    margin-top: 30%;
     font-size: 0.8em;
     text-align: center;
 }

@@ -13,16 +13,18 @@
         <p><a href="/Bev">Back to Home Page</a></p>
     </header>
     <body>
-
-        <h1>Name: @Model.Name </h1>
-        <p>Description: @Model.Description</p>
-        <p>Category: @Model.Category</p>
-        <p>Review: @Model.Review</p>
-        <div class="container">
-            <img src="~/@Model.Image" />
-        </div>
-
-
+        <main>
+            <h1>@Model.Name </h1>
+            <p>Description: @Model.Description</p>
+            <p>Category: @Model.Category</p>
+            <p>Review: @Model.Review</p>
+            <div class="container">
+                <img src="~/@Model.Image" />
+            </div>
+        </main>
+        <footer>
+            &copy; BEVerly 2021
+        </footer>
 
     </body>
 

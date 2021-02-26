@@ -31,7 +31,7 @@ namespace ReviewsSite
                     Name = "Coke",
                     Description = "Smooth caramel beverage.",
                     Category = "Soda",
-                    Review = " 10/10 Would reccomend.", 
+                    Review = " 10/10 Would recommend.", 
                     Image = "Images/coke.jpg"
                 },
                 new Bev()
