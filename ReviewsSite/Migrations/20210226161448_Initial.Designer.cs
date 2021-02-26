@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewsSite;
 
 namespace ReviewsSite.Migrations
 {
     [DbContext(typeof(BevContext))]
-    partial class BevContextModelSnapshot : ModelSnapshot
+    [Migration("20210226161448_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -137,7 +139,7 @@ namespace ReviewsSite.Migrations
                             BevId = 1,
                             Content = "Too carbonated.",
                             Rating = "5",
-                            ReviewDate = new DateTime(2021, 2, 26, 11, 32, 31, 445, DateTimeKind.Local).AddTicks(8600),
+                            ReviewDate = new DateTime(2021, 2, 26, 11, 14, 47, 829, DateTimeKind.Local).AddTicks(7821),
                             ReviewerName = "Carlos"
                         },
                         new
@@ -146,7 +148,7 @@ namespace ReviewsSite.Migrations
                             BevId = 2,
                             Content = "Offensive to the pallete",
                             Rating = "0",
-                            ReviewDate = new DateTime(2021, 2, 26, 11, 32, 31, 449, DateTimeKind.Local).AddTicks(5205),
+                            ReviewDate = new DateTime(2021, 2, 26, 11, 14, 47, 834, DateTimeKind.Local).AddTicks(6465),
                             ReviewerName = "Davis"
                         });
                 });

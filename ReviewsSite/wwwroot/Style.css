@@ -1,3 +1,25 @@
 ﻿body {
     background-color: whitesmoke;
+    font-size: 1.1em;
+    background-image: url(Images\bubbles.jpg);
+}
+
+header {
+    border-bottom: solid black 2px;
+    text-align: center;
+}
+
+img {
+    width: 300px;
+    height: 250px;
+}
+
+footer {
+    margin-top: 10%;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.container {
+    display: flex;
 }
