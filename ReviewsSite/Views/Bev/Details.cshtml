@@ -27,19 +27,27 @@
 
 
         <div class="form-container">
-            <h2><a href="/Review/Create/@Model.Id">Leave a review></a></h2>
+            <h2><a href="/Review/Create/?BevId=@Model.Id">Leave a review</a></h2>
 
         </div>
 
-        @foreach (var item in Model.Reviews)
-        {
-            <div class="review-container">
-                <p>Reviewer Name: <a href="/Review/Update/@item.Id">@item.ReviewerName </a></p>
-                <p>Star Rating: @item.Rating</p>
-                <p>@item.Content</p>
-            </div>
+        <div>
+            <h2 class="user-Reviews">User Reviews</h2>
 
-        }
+            @foreach (var item in Model.Reviews)
+            {
+                <div class="review-container">
+                    <p>Reviewer Name: <a href="/Review/Update/@item.Id">@item.ReviewerName </a></p>
+                    <p>Star Rating: @item.Rating</p>
+                    <p>@item.Content</p>
+                    <a href="/Review/Update/@Model.Id">Edit Review</a>
+                    
+
+                </div>
+
+            }
+        </div>
+        
 
 
 

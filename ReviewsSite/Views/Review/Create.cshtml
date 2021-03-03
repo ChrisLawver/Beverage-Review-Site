@@ -10,6 +10,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Style.css" />
     <title>Create</title>
 </head>
 <body>
@@ -23,34 +24,25 @@
                 <form asp-action="Create" method="post">
                     <input type="hidden" id="BevId" name="BevId" value="@Model.BevId" />
                     <div class="text-success">@ViewBag.Result</div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" />
-                    <br />
+                         <div class="form-group">
+                        <label asp-for="ReviewerName" class="control-label">Name: </label>
+                        <input asp-for="ReviewerName" class="form-control" />
+                        <span asp-validation-for="ReviewerName" class="form-control"></span>
+                    </div>
 
-                    <p>Give a rating:</p>
-                    <label for=" oneStar">1 Star</label>
-                    <input type="radio" id="oneStar" name="rating" />
-                    <br />
+                    <div class="form-group">
+                        <label asp-for="Content" class="control-label">Review: </label>
+                        <input asp-for="Content" class="form-control" />
+                        <span asp-validation-for="Content" class="form-control"></span>
+                    </div>
 
-                    <label for=" twoStar">2 Stars</label>
-                    <input type="radio" id="twoStar" name="rating" />
-                    <br />
+                    <div class="form-group">
+                        <label asp-for="Rating" class="control-label"></label>
+                        <input asp-for="Rating" class="form-control" />
+                        <span asp-validation-for="Rating" class="form-control"></span>
+                    </div>
 
-                    <label for=" threeStar">3 Stars</label>
-                    <input type="radio" id="threeStar" name="rating" />
                     <br />
-
-                    <label for=" fourStar">4 Stars</label>
-                    <input type="radio" id="fourStar" name="rating" />
-                    <br />
-
-                    <label for=" fiveStar">5 Stars</label>
-                    <input type="radio" id="fiveStar" name="rating" />
-                    <br />
-
-                    <textarea name="review"></textarea>
-                    <br />
-
                     <input type="submit" />
                 </form>
             </div>

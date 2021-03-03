@@ -25,12 +25,12 @@ namespace ReviewsSite.Controllers
             return View(reviewList);
         }
 
-        public ViewResult Create(int id)
+        public ViewResult Create(int BevId)
         {
             var ReviewList = reviewRepo;
             ViewBag.ReviewList = new SelectList(ReviewList.GetALL(), "Id", "ReviewerName");
 
-            return View(new Review() { BevId = id});
+            return View(new Review() {BevId = BevId});
         }
 
         [HttpPost]
@@ -38,6 +38,7 @@ namespace ReviewsSite.Controllers
         {
             var ReviewList = reviewRepo;
             ViewBag.ReviewList = new SelectList(ReviewList.GetALL(), "Id", "ReviewerName");
+            model.ReviewDate = DateTime.Now;
             reviewRepo.Create(model);
 
             return View(model);
