@@ -19,10 +19,18 @@ namespace ReviewsSite.Controllers
 
         }
 
-        public ViewResult Index()
+        public ViewResult Details()
         { 
             var reviewList = reviewRepo.GetALL();
             return View(reviewList);
+        }
+
+        public ViewResult Create(int id)
+        {
+            var ReviewList = reviewRepo;
+            ViewBag.ReviewList = new SelectList(ReviewList.GetALL(), "Id", "ReviewerName");
+
+            return View(new Review() { BevId = id});
         }
 
         [HttpPost]
@@ -30,8 +38,10 @@ namespace ReviewsSite.Controllers
         {
             var ReviewList = reviewRepo;
             ViewBag.ReviewList = new SelectList(ReviewList.GetALL(), "Id", "ReviewerName");
-           
-            return View(new Review());
+            reviewRepo.Create(model);
+
+            return View(model);
+            
         }
 
 
