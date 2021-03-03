@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using ReviewsSite.Models;
 using ReviewsSite.Repositories;
 using System;
@@ -22,6 +23,38 @@ namespace ReviewsSite.Controllers
         { 
             var reviewList = reviewRepo.GetALL();
             return View(reviewList);
+        }
+
+        [HttpPost]
+        public ViewResult Create(Review model)
+        {
+            var ReviewList = reviewRepo;
+            ViewBag.ReviewList = new SelectList(ReviewList.GetALL(), "Id", "ReviewerName");
+           
+            return View(new Review());
+        }
+
+
+        [HttpPost]
+        public ViewResult Update(Review model)
+        {
+            var ReviewList = reviewRepo;
+
+            ViewBag.ReviewList = new SelectList(ReviewList.GetALL(), "Id", "ReviewerName");
+            reviewRepo.Update(model);
+
+
+            return View(model);
+        }
+
+        public ViewResult Update(int id)
+        {
+            var ReviewList = reviewRepo;
+            var model = reviewRepo.GetById(id);
+
+            ViewBag.ReviewList = new SelectList(ReviewList.GetALL(), "Id", "ReviewerName");
+            
+            return View(model);
         }
     }
 }

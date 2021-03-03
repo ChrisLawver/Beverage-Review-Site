@@ -26,6 +26,23 @@ footer {
     text-align: center;
 }
 
-.container {
+.image-container {
+  
+}
+
+.form-container {
+    margin-left: 5%;
+}
+
+.review-container {
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 50%;
+    margin-bottom: 3%;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items:center;
+    border: solid black 2px;
+    background-color: lightgray;
 }
