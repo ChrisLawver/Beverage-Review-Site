@@ -1,20 +1,25 @@
 using System;
-using System.Web.Mvc;
+
 using Xunit;
 using ReviewsSite.Controllers;
 using ReviewsSite.Models;
 using ReviewsSite.Repositories;
+using NSubstitute;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace ReviewsSite.Tests
 {
     public class BevControllerTests
     {
-        private BevRepository bevRepo;
+        private IRepository<Bev> bevRepo;
 
         private BevController sut;
 
-        public BevControllerTests()
+        public BevControllerTests()         
         {
+            bevRepo = Substitute.For<IRepository<Bev>>();
             sut = new BevController(bevRepo);
         }
 
@@ -35,8 +40,10 @@ namespace ReviewsSite.Tests
         public void Index_Returns_BevModel_To_View()
          {
             //Arrange
-            Bev bev = new Bev();
-
+            //Bev bev = new Bev();
+            List<Bev> bevs = null;
+            bevRepo.GetALL().Returns(bevs);
+                      
 
 
             //Act
@@ -44,7 +51,7 @@ namespace ReviewsSite.Tests
 
 
             // Assert
-            Assert.IsType<Bev>(result.Model);
+            Assert.Equal(bevs,result.Model);
             
          }
 
