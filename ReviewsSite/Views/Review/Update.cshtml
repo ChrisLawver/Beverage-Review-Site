@@ -1,4 +1,5 @@
 ﻿@model ReviewsSite.Models.Review
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
     Layout = null;
@@ -13,57 +14,52 @@
 </head>
 <body>
 
-<h4>Review</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Update">
-            <input type="hidden" id="BevId" name="BevId" value="@Model.BevId" />
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            @*<div class="form-group">
-                <label asp-for="Id" class="control-label"></label>
-                <input asp-for="Id" class="form-control" />
-                <span asp-validation-for="Id" class="text-danger"></span>
-            </div>*@
-            <div class="form-group">
-                <label asp-for="ReviewerName" class="control-label">Name: </label>
-                <input asp-for="ReviewerName" class="form-control" />
-                <span asp-validation-for="ReviewerName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Content" class="control-label">Review: </label>
-                <input asp-for="Content" class="form-control" />
-                <span asp-validation-for="Content" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Rating" class="control-label">Rating: </label>
-                <input asp-for="Rating" class="form-control" />
-                <span asp-validation-for="Rating" class="text-danger"></span>
-            </div>
-            @*<div class="form-group">
-                <label asp-for="BevId" class="control-label"></label>
-                <input asp-for="BevId" class="form-control" />
-                <span asp-validation-for="BevId" class="text-danger"></span>
-            </div>*@
-            @*<div class="form-group">
-            <label asp-for="ReviewDate" class="control-label"></label>
-            <input asp-for="ReviewDate" class="form-control" />
-            <span asp-validation-for="ReviewDate" class="text-danger"></span>
-        </div>*@
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+    <h4>Review</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Update">
+                <input type="hidden" id="BevId" name="BevId" value="@Model.BevId" />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                @*<div class="form-group">
+                        <label asp-for="Id" class="control-label"></label>
+                        <input asp-for="Id" class="form-control" />
+                        <span asp-validation-for="Id" class="text-danger"></span>
+                    </div>*@
+                <div class="form-group">
+                    <label asp-for="ReviewerName" class="control-label">Name: </label>
+                    <input asp-for="ReviewerName" class="form-control" />
+                    <span asp-validation-for="ReviewerName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Content" class="control-label">Review: </label>
+                    <input asp-for="Content" class="form-control" />
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Rating" class="control-label">Rating: </label>
+                    <input asp-for="Rating" class="form-control" />
+                    <span asp-validation-for="Rating" class="text-danger"></span>
+                </div>
+                @*<div class="form-group">
+                        <label asp-for="BevId" class="control-label"></label>
+                        <input asp-for="BevId" class="form-control" />
+                        <span asp-validation-for="BevId" class="text-danger"></span>
+                    </div>*@
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a href="/Bev/Details/@Model.BevId">Back to List</a>
-    @*<a asp-action="Index">Back to List</a>*@
-</div>
+    <div>
+        <a href="/Bev/Details/@Model.BevId">Back to List</a>
+        @*<a asp-action="Index">Back to List</a>*@
+    </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
 </body>
 </html>

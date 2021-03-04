@@ -37,10 +37,10 @@
             @foreach (var item in Model.Reviews)
             {
                 <div class="review-container">
-                    <p>Reviewer Name: <a href="/Review/Update/@item.Id">@item.ReviewerName </a></p>
+                    <p>Reviewer Name: <a href="/Review/Update/@item.Id">@item.ReviewerName </a> | @item.ReviewDate</p>
                     <p>Star Rating: @item.Rating</p>
                     <p>@item.Content</p>
-                    <a href="/Review/Update/@Model.Id">Edit Review</a>
+                    <p><a href="/Review/Update/@item.Id">Edit</a> | <a href="/Review/Delete/@item.Id">Delete</a></p>
                     
 
                 </div>
