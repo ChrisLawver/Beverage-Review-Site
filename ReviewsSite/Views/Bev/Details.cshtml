@@ -15,11 +15,13 @@
             <h1>BEVerly</h1>
             <p><a href="/Bev">Back to Home Page</a></p>
         </header>
-        <main>
+
+        <main class="productDetails">
             <h1>@Model.Name </h1>
-            <p>Description: @Model.Description</p>
-            <p>Category: @Model.Category</p>
-            <p>Review: @Model.Review</p>
+            <div class="bevDescription">
+                <p>@Model.Description</p>
+            </div>
+            <p>Category: @Model.Category</p>     
             <div class="image-container">
                 <img src="~/@Model.Image" />
             </div>

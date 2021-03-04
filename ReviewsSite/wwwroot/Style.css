@@ -7,12 +7,15 @@
     color: black;
     
 }
+
+
 main {
     margin-left: 5%; 
 }
 header {
     border-bottom: solid black 2px;
     text-align: center;
+    font-family: cursive;
 }
 
 img {
@@ -49,4 +52,13 @@ footer {
 
 .user-Reviews {
     margin-left: 5%;
+}
+
+.productDetails {
+    margin-right: 50%;
+}
+
+.bevDetails {
+    background-color: lightgray;
+    opacity: 50%;
 }
