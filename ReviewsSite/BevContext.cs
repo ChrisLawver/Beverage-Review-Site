@@ -15,7 +15,7 @@ namespace ReviewsSite
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=(localdb)\\mssqllocaldb; Database=BevContext2; Trusted_Connection=True";
+            var connectionString = "Server=(localdb)\\mssqllocaldb; Database=BevContext3; Trusted_Connection=True";
 
             optionsBuilder.UseSqlServer(connectionString).UseLazyLoadingProxies();
 
@@ -87,7 +87,7 @@ namespace ReviewsSite
                     Id = 1,
                     Content = "Too carbonated.",
                     ReviewerName = "Carlos",
-                    Rating = "5",
+                    Rating = 5,
                     ReviewDate = DateTime.Now,
                     BevId = 1
                 },
@@ -96,7 +96,7 @@ namespace ReviewsSite
                     Id = 2,
                     Content = "Offensive to the pallete",
                     ReviewerName = "Davis",
-                    Rating = "0",
+                    Rating = 0,
                     ReviewDate = DateTime.Now,
                     BevId = 2
                 }

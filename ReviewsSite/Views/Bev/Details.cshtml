@@ -9,11 +9,12 @@
         <link rel="stylesheet" href="~/Style.css" />
         <title>BEVerly</title>
     </head>
-    <header>
-        <h1>BEVerly</h1>
-        <p><a href="/Bev">Back to Home Page</a></p>
-    </header>
+    
     <body>
+        <header>
+            <h1>BEVerly</h1>
+            <p><a href="/Bev">Back to Home Page</a></p>
+        </header>
         <main>
             <h1>@Model.Name </h1>
             <p>Description: @Model.Description</p>
@@ -26,52 +27,27 @@
 
 
         <div class="form-container">
-        <h2>Leave a review</h2>
-            <form asp-action="Create" method="post">
-                <input type="hidden" id="BevId" name="BevId" value="@Model.Id" />
-                <div class="text-success">@ViewBag.Result</div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" />
-                <br />
+            <h2><a href="/Review/Create/?BevId=@Model.Id">Leave a review</a></h2>
 
-                <p>Giv a rating:</p>
-                <label for=" oneStar">1 Star</label>
-                <input type="radio" id="oneStar" name="rating" />
-                <br />
-
-                <label for=" twoStar">2 Stars</label>
-                <input type="radio" id="twoStar" name="rating" />
-                <br />
-
-                <label for=" threeStar">3 Stars</label>
-                <input type="radio" id="threeStar" name="rating" />
-                <br />
-
-                <label for=" fourStar">4 Stars</label>
-                <input type="radio" id="fourStar" name="rating" />
-                <br />
-
-                <label for=" fiveStar">5 Stars</label>
-                <input type="radio" id="fiveStar" name="rating" />
-                <br />
-
-                <textarea name="review"></textarea>
-                <br />
-
-                <input type="submit" />
-
-            </form>
         </div>
 
-        @foreach (var item in Model.Reviews)
-        {
-            <div class="review-container">
-                <p>Reviewer Name: <a href="/Review/Update/@item.Id">@item.ReviewerName </a></p>
-                <p>Star Rating: @item.Rating</p>
-                <p>@item.Content</p>
-            </div>
-           
-        }
+        <div>
+            <h2 class="user-Reviews">User Reviews</h2>
+
+            @foreach (var item in Model.Reviews)
+            {
+                <div class="review-container">
+                    <p>Reviewer Name: <a href="/Review/Update/@item.Id">@item.ReviewerName </a></p>
+                    <p>Star Rating: @item.Rating</p>
+                    <p>@item.Content</p>
+                    <a href="/Review/Update/@Model.Id">Edit Review</a>
+                    
+
+                </div>
+
+            }
+        </div>
+        
 
 
 

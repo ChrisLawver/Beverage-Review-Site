@@ -11,7 +11,7 @@ namespace ReviewsSite.Models
         public int Id { get; set; }
         public string Content { get; set; }
         public string ReviewerName { get; set; }
-        public string Rating { get; set; }
+        public  int Rating { get; set; }
         public int BevId { get; set; }
         public virtual Bev Bev { get; set; }
         public DateTime ReviewDate { get; set; }
