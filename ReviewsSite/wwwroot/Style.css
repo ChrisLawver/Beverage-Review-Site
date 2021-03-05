@@ -60,5 +60,15 @@ footer {
 
 .bevDetails {
     background-color: lightgray;
-    opacity: 50%;
+    opacity: .5;
+}
+
+.ratings {
+    float: left;
+}
+
+.ratingsimg {
+    height: 50px;
+    width: 50px;
+
 }

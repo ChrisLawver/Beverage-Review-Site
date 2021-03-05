@@ -16,7 +16,7 @@ namespace ReviewsSite.Tests
             sut.Id = 40;
             sut.Rating = 2;
             //sut.ReviewDate = "date";
-            //sut.ReviewerName = "Name of Reviewer";
+            sut.ReviewerName = "TestName";
                         
         }
 
@@ -35,13 +35,13 @@ namespace ReviewsSite.Tests
             Assert.Equal(2, result);
         }
 
-        //[Fact]
-        //public void ReviewConstructor_Sets_ReviewerName_On_ReviewModel()
-        //{
-        //    string result = sut.ReviewerName;
-        //    Assert.Equal("", result);
-        //}
-                
+        [Fact]
+        public void ReviewConstructor_Sets_ReviewerName_On_ReviewModel()
+        {
+            string result = sut.ReviewerName;
+            Assert.Equal("TestName", result);
+        }
+
 
     }
 
