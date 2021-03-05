@@ -29,7 +29,7 @@
 
 
         <div class="form-container">
-            <h2><a href="/Review/Create/?BevId=@Model.Id">Leave a review</a></h2>
+            <h2><a href="/Review/Create/?BevId=@Model.Id"><button>Leave a review</button></a></h2>
 
         </div>
 
@@ -40,9 +40,17 @@
             {
                 <div class="review-container">
                     <p><u>@item.ReviewerName</u> | @item.ReviewDate</p>
-                    <p>@item.Rating stars</p>
+                    @*<p>@item.Rating stars</p>*@
+                <div class="ratings">
+                    @for (int i = 0; i < item.Rating; i++)
+                    {
+                        <img class="ratingsimg" src="https://img.icons8.com/emoji/48/000000/star-emoji.png" />
+
+                    }
+                </div>
+                    
                     <p>@item.Content</p>
-                    <p><a href="/Review/Update/@item.Id">Edit</a> | <a href="/Review/Delete/@item.Id">Delete</a></p>
+                    <p><a href="/Review/Update/@item.Id"><button>Edit</button></a><a href="/Review/Delete/@item.Id"><button>Delete</button></a></p>
                     
 
                 </div>

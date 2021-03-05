@@ -44,7 +44,7 @@ namespace ReviewsSite
                     Name = "Pepsi",
                     Description = "Pepsi is a carbonated soft drink manufactured by PepsiCo. " +
                     "Originally created and developed in 1893 by Caleb Bradham and introduced as Brad's Drink, " +
-                    "it was renamed as Pepsi-Cola in 1898,[1] and then shortened to Pepsi in 1961.",
+                    "it was renamed as Pepsi-Cola in 1898, and then shortened to Pepsi in 1961.",
                     Category = "Soda",
                     Review = "Disappointing.",
                     Image = "Images/Pepsipic.jpg"
@@ -65,8 +65,8 @@ namespace ReviewsSite
                     Id = 4,
                     Name = "Monster",
                     Description = "Monster Energy is an energy drink that was introduced by Hansen Natural Company " +
-                    "(now Monster Beverage Corporation) in April of 2002.[1] As of 2019, Monster Energy has a 35% share " +
-                    "of the energy drink market,[2] the second highest share after Red Bull.",
+                    "in April of 2002. As of 2019, Monster Energy has a 35% share " +
+                    "of the energy drink market, the second highest share after Red Bull.",
                     Category = "Energy Drink",
                     Review = "It's mediocre",
                     Image = "Images/Monster.jpg"
@@ -75,7 +75,7 @@ namespace ReviewsSite
                 {
                     Id = 5,
                     Name = "La Croix",
-                    Description = "LaCroix or La Croix (/ləˈkrɔɪ/;) is an American brand of carbonated water " +
+                    Description = "LaCroix or La Croix is an American brand of carbonated water " +
                     "that originated in La Crosse, Wisconsin by G. Heileman Brewing Company and is now distributed " +
                     "by National Beverage Corporation.",
                     Category = "Sparkling Water",

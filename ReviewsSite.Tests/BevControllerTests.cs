@@ -54,6 +54,19 @@ namespace ReviewsSite.Tests
             Assert.Equal(bevs,result.Model);
             
          }
+        [Fact]
+        public void Create_Returns_A_View()
+        {
+            // Arrange
+
+            //Act
+
+            //var result = sut.Create();
+
+            //Assert
+
+           // Assert.IsType<ViewResult>(result);
+        }
 
     }
 }
