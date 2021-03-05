@@ -15,11 +15,13 @@
             <h1>BEVerly</h1>
             <p><a href="/Bev">Back to Home Page</a></p>
         </header>
-        <main>
+
+        <main class="productDetails">
             <h1>@Model.Name </h1>
-            <p>Description: @Model.Description</p>
-            <p>Category: @Model.Category</p>
-            <p>Review: @Model.Review</p>
+            <div class="bevDescription">
+                <p>@Model.Description</p>
+            </div>
+            <p>Category: @Model.Category</p>     
             <div class="image-container">
                 <img src="~/@Model.Image" />
             </div>
@@ -37,10 +39,10 @@
             @foreach (var item in Model.Reviews)
             {
                 <div class="review-container">
-                    <p>Reviewer Name: <a href="/Review/Update/@item.Id">@item.ReviewerName </a></p>
-                    <p>Star Rating: @item.Rating</p>
+                    <p><u>@item.ReviewerName</u> | @item.ReviewDate</p>
+                    <p>@item.Rating stars</p>
                     <p>@item.Content</p>
-                    <a href="/Review/Update/@Model.Id">Edit Review</a>
+                    <p><a href="/Review/Update/@item.Id">Edit</a> | <a href="/Review/Delete/@item.Id">Delete</a></p>
                     
 
                 </div>

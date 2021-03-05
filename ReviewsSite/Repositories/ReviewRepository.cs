@@ -46,5 +46,16 @@ namespace ReviewsSite.Repositories
             _db.ReviewList.Update(obj);
             _db.SaveChanges();
         }
+
+        public List<Review> PopulateReviewList()
+        {
+            var reviews = _db.Set<Review>().ToList();
+            if(reviews.Count == 0)
+            {
+                return new List<Review>();
+            }
+
+            return reviews;
+        }
     }
  }

@@ -46,5 +46,10 @@ namespace ReviewsSite.Repositories
             _db.Bevs.Update(obj);
             _db.SaveChanges();
         }
+
+        public List<Bev> PopulateReviewList()
+        {
+            return new List<Bev>();
+        }
     }
 }

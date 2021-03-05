@@ -29,7 +29,11 @@ namespace ReviewsSite
                 {
                     Id = 1,
                     Name = "Coke",
-                    Description = "Smooth caramel beverage.",
+                    Description = "A sweetened, carbonated soft drink flavored with vanilla, cinnamon, citrus oils and other flavorings. " +
+                    "Most contain caffeine, which was originally sourced from the kola nut, leading to the drink's name, though other sources are " +
+                    "now also used. Cola became popular worldwide after pharmacist John Pemberton invented Coca-Cola in 1886, which was later imitated by " +
+                    "other manufacturers.His non-alcoholic recipe was inspired by the coca wine of pharmacist Angelo Mariani, created in 1863.",
+
                     Category = "Soda",
                     Review = " 10/10 Would recommend.", 
                     Image = "Images/coke.jpg"
@@ -38,7 +42,9 @@ namespace ReviewsSite
                 {
                     Id = 2,
                     Name = "Pepsi",
-                    Description = "Rough and tumble",
+                    Description = "Pepsi is a carbonated soft drink manufactured by PepsiCo. " +
+                    "Originally created and developed in 1893 by Caleb Bradham and introduced as Brad's Drink, " +
+                    "it was renamed as Pepsi-Cola in 1898,[1] and then shortened to Pepsi in 1961.",
                     Category = "Soda",
                     Review = "Disappointing.",
                     Image = "Images/Pepsipic.jpg"
@@ -47,7 +53,9 @@ namespace ReviewsSite
                 {
                     Id = 3,
                     Name = "Red Bull",
-                    Description = "It gives you wings",
+                    Description = "Red Bull is an energy drink sold by Red Bull GmbH, an Austrian company created in 1987. " +
+                    "Red Bull has the highest market share of any energy drink in the world, " +
+                    "with 7.5 billion cans sold in a year (as of 2019).",
                     Category = "Energy Drink",
                     Review = "Yummy",
                     Image = "Images/RedBull.jpg"
@@ -56,7 +64,9 @@ namespace ReviewsSite
                 {
                     Id = 4,
                     Name = "Monster",
-                    Description = "Energizing drink",
+                    Description = "Monster Energy is an energy drink that was introduced by Hansen Natural Company " +
+                    "(now Monster Beverage Corporation) in April of 2002.[1] As of 2019, Monster Energy has a 35% share " +
+                    "of the energy drink market,[2] the second highest share after Red Bull.",
                     Category = "Energy Drink",
                     Review = "It's mediocre",
                     Image = "Images/Monster.jpg"
@@ -65,7 +75,9 @@ namespace ReviewsSite
                 {
                     Id = 5,
                     Name = "La Croix",
-                    Description = "Many flavors",
+                    Description = "LaCroix or La Croix (/ləˈkrɔɪ/;) is an American brand of carbonated water " +
+                    "that originated in La Crosse, Wisconsin by G. Heileman Brewing Company and is now distributed " +
+                    "by National Beverage Corporation.",
                     Category = "Sparkling Water",
                     Review = "Refreshlingy bubbly",
                     Image = "Images/LaCroix.jpg"
@@ -74,7 +86,7 @@ namespace ReviewsSite
                 {
                     Id = 6,
                     Name = "SpinDrift",
-                    Description = "Fruit juice flavored sparkling water",
+                    Description = "America's first sparkling water made with just real squeezed fruit.",
                     Category = "Sparkling Water",
                     Review = "It's like La Croix's cooler sibling",
                     Image = "Images/Spindrift.jpg"
