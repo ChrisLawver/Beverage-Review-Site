@@ -7,33 +7,49 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ReviewsSite.Repositories
 {
-    public class BevContext : DbContext; 
+   
     public class BevRepository : IRepository<Bev>
+    {
+        private BevContext _db;
 
-    { 
+        public BevRepository(BevContext db)
+        {
+            this._db = db;
+        }
+
         public void Create(Bev obj)
         {
-           // Bev.Add(obj);
+            // Bev.Add(obj);
+            _db.Bevs.Add(obj);
+            _db.SaveChanges();
         }
 
         public void Delete(Bev obj)
         {
-            throw new NotImplementedException();
+            _db.Bevs.Remove(obj);
+            _db.SaveChanges();
+
         }
 
         public IEnumerable<Bev> GetALL()
         {
-            throw new NotImplementedException();
+            return _db.Bevs.ToList();
         }
 
         public Bev GetById(int id)
         {
-            throw new NotImplementedException();
+            return _db.Bevs.Find(id);
         }
 
         public void Update(Bev obj)
         {
-            throw new NotImplementedException();
+            _db.Bevs.Update(obj);
+            _db.SaveChanges();
+        }
+
+        public List<Bev> PopulateReviewList()
+        {
+            return new List<Bev>();
         }
     }
 }

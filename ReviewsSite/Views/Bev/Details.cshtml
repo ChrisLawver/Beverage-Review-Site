@@ -1,0 +1,70 @@
+﻿@model ReviewsSite.Models.Bev
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="~/Style.css" />
+        <title>BEVerly</title>
+    </head>
+    
+    <body>
+        <header>
+            <h1>BEVerly</h1>
+            <p><a href="/Bev">Back to Home Page</a></p>
+        </header>
+
+        <main class="productDetails">
+            <h1>@Model.Name </h1>
+            <div class="bevDescription">
+                <p>@Model.Description</p>
+            </div>
+            <p>Category: @Model.Category</p>     
+            <div class="image-container">
+                <img src="~/@Model.Image" />
+            </div>
+        </main>
+
+
+        <div class="form-container">
+            <h2><a href="/Review/Create/?BevId=@Model.Id"><button>Leave a review</button></a></h2>
+
+        </div>
+
+        <div>
+            <h2 class="user-Reviews">User Reviews</h2>
+
+            @foreach (var item in Model.Reviews)
+            {
+                <div class="review-container">
+                    <p><u>@item.ReviewerName</u> | @item.ReviewDate</p>
+                    @*<p>@item.Rating stars</p>*@
+                <div class="ratings">
+                    @for (int i = 0; i < item.Rating; i++)
+                    {
+                        <img class="ratingsimg" src="https://img.icons8.com/emoji/48/000000/star-emoji.png" />
+
+                    }
+                </div>
+                    
+                    <p>@item.Content</p>
+                    <p><a href="/Review/Update/@item.Id"><button>Edit</button></a><a href="/Review/Delete/@item.Id"><button>Delete</button></a></p>
+                    
+
+                </div>
+
+            }
+        </div>
+        
+
+
+
+
+        <footer>
+            &copy; BEVerly 2021
+        </footer>
+
+    </body>
+    </html>
