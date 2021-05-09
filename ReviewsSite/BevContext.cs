@@ -15,7 +15,8 @@ namespace ReviewsSite
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=(localdb)\\mssqllocaldb; Database=BevContext3; Trusted_Connection=True";
+            var connectionString = "Server = localhost; Database = master; Trusted_Connection = True";
+            //var connectionString = "Server=(localdb)\\mssqllocaldb; Database=BevContext3; Trusted_Connection=True";
 
             optionsBuilder.UseSqlServer(connectionString).UseLazyLoadingProxies();
 
